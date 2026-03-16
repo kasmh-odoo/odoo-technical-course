@@ -1,0 +1,19 @@
+name: Build and Deploy
+on: [push]
+permissions: write-all
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_REPO: kasmh-odoo/odoo-technical-course
+          TARGET_BRANCH: main
+          NODE_OPTIONS: --openssl-legacy-provider
+          BUILD_SCRIPT: git config --global --add safe.directory "*" && npm install && npm run docs:build
+          BUILD_DIR: docs/.vuepress/dist
