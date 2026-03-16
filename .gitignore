@@ -1,0 +1,4 @@
+/node_modules
+*.pyc
+/.idea
+/docs/.vuepress/dist
