@@ -15,4 +15,4 @@ footer: MIT Licensed | Copyright © 2024
 
 ## Course Overview
 
-Welcome to the Odoo Technical Course documentation. This site contains all the exercises and guides needed for the TCO modules.
+Welcome to the Odoo Technical Course documentation. This site contains all the exercises and guides needed for the TCO modules. Good luck!
