@@ -1,87 +1,51 @@
 module.exports = {
   title: 'Odoo Technical Course',
   description: 'TCO exercises repo',
-  base: '/odoo-technical-course/', // Required for GitHub Pages
+  // Ensure this matches your GitHub repository name exactly
+  base: '/odoo-technical-course/', 
+  
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
       { text: 'GitHub', link: 'https://github.com/your-username/odoo-technical-course' }
     ],
+    sidebarDepth: 1, // Increased to 1 to show headers within pages
+    displayAllHeaders: false, 
     sidebar: [
-      '/',
-      '/guide/',
+      {
+        title: 'Introduction',
+        path: '/',
+        collapsable: false,
+        children: [
+          '/'
+        ]
+      },
       {
         title: "Exercises",
         collapsable: false,
-        path: "/",
-        initialOpenGroupIndex: -1,
         children: [
           {
             title: "Eagle Estates",
             collapsable: true,
-            path: "/docs/exercises/eagle_estates/index.html",
+            // Point to the folder index (docs/exercises/eagle_estates/README.md or index.md)
+            path: "/docs/exercises/eagle_estates/", 
             children: [
-              {
-                title: "Part 1",
-                path: "/docs/exercises/eagle_estates/part_1.html",
-              },
-              {
-                title: "Part 2",
-                path: "/docs/exercises/eagle_estates/part_2.html",
-              },
-              {
-                title: "Part 3",
-                path: "/docs/exercises/eagle_estates/part_3.html",
-              },
-              {
-                title: "Part 4",
-                path: "/docs/exercises/eagle_estates/part_4.html",
-              },
-              {
-                title: "Part 5",
-                path: "/docs/exercises/eagle_estates/part_5.html",
-              },
-              {
-                title: "Part 6",
-                path: "/docs/exercises/eagle_estates/part_6.html",
-              },
-              {
-                title: "Part 7",
-                path: "/docs/exercises/eagle_estates/part_7.html",
-              },
-              {
-                title: "Part 8",
-                path: "/docs/exercises/eagle_estates/part_8.html",
-              },
-              {
-                title: "Part 9",
-                path: "/docs/exercises/eagle_estates/part_9.html",
-              },
-              {
-                title: "Part 10",
-                path: "/docs/exercises/eagle_estates/part_10.html",
-              },
-              {
-                title: "Part 11",
-                path: "/docs/exercises/eagle_estates/part_11.html",
-              },
-              {
-                title: "Part 12",
-                path: "/docs/exercises/eagle_estates/part_12.html",
-              },
-              {
-                title: "Part 13",
-                path: "/docs/exercises/eagle_estates/part_13.html",
-              },
-              {
-                title: "Part 14",
-                path: "/docs/exercises/eagle_estates/part_14.html",
-              },
-              {
-                title: "Part 15",
-                path: "/docs/exercises/eagle_estates/part_15.html",
-              },
+              "/docs/exercises/eagle_estates/part_1",
+              "/docs/exercises/eagle_estates/part_2",
+              "/docs/exercises/eagle_estates/part_3",
+              "/docs/exercises/eagle_estates/part_4",
+              "/docs/exercises/eagle_estates/part_5",
+              "/docs/exercises/eagle_estates/part_6",
+              "/docs/exercises/eagle_estates/part_7",
+              "/docs/exercises/eagle_estates/part_8",
+              "/docs/exercises/eagle_estates/part_9",
+              "/docs/exercises/eagle_estates/part_10",
+              "/docs/exercises/eagle_estates/part_11",
+              "/docs/exercises/eagle_estates/part_12",
+              "/docs/exercises/eagle_estates/part_13",
+              "/docs/exercises/eagle_estates/part_14",
+              "/docs/exercises/eagle_estates/part_15",
             ]
           }
         ]
